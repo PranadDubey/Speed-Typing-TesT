@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="typing.css" />
+  </head>
+
+  <body>
+    <h1 class="title">Typing Test</h1>
+    <div class="row">
+      <div class="col-9">
+        <div class="background">
+          <div class="title_left">Typing Speed Test</div>
+          <div class="quote" id="quoteId"></div>
+          <div>
+            <textarea
+              class="input_area"
+              id="text_box"
+              placeholder="Start typing here..."
+              oninput="checkingAndCal()"
+            ></textarea>
+            <div>
+              <button class="start_btn" onclick="startGame()">Start</button>
+              <button class="restart_btn" onclick="resetValues()">
+                Restart
+              </button>
+            </div>
+
+            <!-- <button class="restart_btn">Restart</button> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="results">
+          <div class="title_right">Results</div>
+          <div class="wpm">
+            <div class="heading">WPM<span class="wpm_result">100</span></div>
+          </div>
+          <div class="cpm">
+            <div class="heading">CPM<span class="cpm_result">100</span></div>
+          </div>
+          <div class="Error">
+            <div class="heading">
+              Error(s)<span class="error_result">0</span>
+            </div>
+          </div>
+          <div class="Time">
+            <div class="heading">Time<span class="time_left">60s</span></div>
+          </div>
+          <div class="Accuracy">
+            <div class="heading">
+              Accuracy<span class="accuracy_result"
+                >100<span class="percentage">%</span></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="typing.js"></script>
+  </body>
+</html>
